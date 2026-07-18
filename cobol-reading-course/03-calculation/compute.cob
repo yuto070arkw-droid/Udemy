@@ -1,0 +1,19 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. COMPUTE-SAMPLE.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  WS-UNIT-PRICE     PIC 9(5) VALUE 1200.
+       01  WS-QUANTITY       PIC 9(3) VALUE 3.
+       01  WS-TAX-RATE       PIC 9V99 VALUE 0.10.
+       01  WS-SUBTOTAL       PIC 9(7).
+       01  WS-TAX            PIC 9(7).
+       01  WS-TOTAL          PIC 9(7).
+       PROCEDURE DIVISION.
+           COMPUTE WS-SUBTOTAL = WS-UNIT-PRICE * WS-QUANTITY.
+           COMPUTE WS-TAX = WS-SUBTOTAL * WS-TAX-RATE.
+           COMPUTE WS-TOTAL = WS-SUBTOTAL + WS-TAX.
+
+           DISPLAY "小計 = " WS-SUBTOTAL.
+           DISPLAY "税額 = " WS-TAX.
+           DISPLAY "合計 = " WS-TOTAL.
+           STOP RUN.
