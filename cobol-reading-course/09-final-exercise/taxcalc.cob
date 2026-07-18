@@ -1,0 +1,9 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. TAXCALC.
+       DATA DIVISION.
+       LINKAGE SECTION.
+       01  LK-AMOUNT         PIC 9(7).
+       01  LK-TAX            PIC 9(7).
+       PROCEDURE DIVISION USING LK-AMOUNT LK-TAX.
+           COMPUTE LK-TAX = LK-AMOUNT * 0.10.
+           GOBACK.
