@@ -1,0 +1,11 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PERFORM-TIMES.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  WS-COUNT          PIC 9 VALUE 0.
+       PROCEDURE DIVISION.
+           PERFORM 5 TIMES
+              ADD 1 TO WS-COUNT
+              DISPLAY "COUNT = " WS-COUNT
+           END-PERFORM.
+           STOP RUN.
