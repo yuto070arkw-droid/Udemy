@@ -1,0 +1,13 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PERFORM-VARYING.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01  WS-INDEX          PIC 9 VALUE 0.
+       01  WS-SUM            PIC 99 VALUE 0.
+       PROCEDURE DIVISION.
+           PERFORM VARYING WS-INDEX FROM 1 BY 1 UNTIL WS-INDEX > 5
+              ADD WS-INDEX TO WS-SUM
+              DISPLAY "INDEX = " WS-INDEX " SUM = " WS-SUM
+           END-PERFORM.
+           DISPLAY "合計 = " WS-SUM.
+           STOP RUN.
